@@ -6,7 +6,7 @@ the working paper Ledoit and Wolf (2018), entitled ['Analytical Nonlinear Shrink
 
 # Installation
 ```
-pip install nonlinshrink
+pip install non-linear-shrinkage
 ```
 
 # Usage
@@ -35,10 +35,23 @@ sigma_tilde = nls.shrink_cov(res, k=2)  # corresponding to 2 degrees of freedom
 ```
 # Developing
 Please submit a PR! The shrinkage function itself is located in `nonlinshrink.py`. 
-For running the tests do 
+
+If using conda, set up the project by doing the following:
 ```
-git clone https://github.com/matzhaugen/analytic_shrinkage.git
-cd analytic_shrinkage
-pip install -e . # install the package
+# Create conda env
+conda env create -f environment.yml
+# Activate env
+conda activate non_linear_shrinkage
+# Perform local editable install
+pip install -e . --no-deps
+```
+
+If using pip or other venv manager:
+```
+pip install -e .
+```
+
+Then you can run the tests with the following command:
+```
 pytest
 ```

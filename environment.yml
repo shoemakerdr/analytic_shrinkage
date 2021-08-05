@@ -1,0 +1,8 @@
+name: non_linear_shrinkage
+dependencies:
+    - python
+    - pytest
+    - numpy
+    - build
+    - twine
+    - invoke
